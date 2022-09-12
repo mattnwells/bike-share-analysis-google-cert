@@ -329,7 +329,7 @@ data_12_months_2 %>%
   select(-member_type)
 ```
 
-##Recomendations
+## Recomendations
 
 The business question this study seeks to answers is, how does bicycle use differs between annual members and casual riders?
 
