@@ -1,5 +1,5 @@
-# Google Data Analytics Capstone Project
+# Google Data Analytics Certificate Capstone Project
 
 This project was completed as a requirement of the Google Data Analytics Certificate program offered in partnership between Coursera and Grow With Google. More information about the certificate and its requirements can be found [here](https://grow.google/certificates/data-analytics/#?modal_active=none).
 
-The file cyclistic-capstone.md contains my full report.
+The file cyclistic-capstone.md contains my full report. My report can also be viewed on Medium (link forthcoming!).
