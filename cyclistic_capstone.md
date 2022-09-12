@@ -3,8 +3,8 @@ title: "Google Data Analytics Professional Certificate"
 author: "Matthew Wells"
 date: "2022-09-11"
 output:
-  pdf_document: default
-  html_document: default
+pdf_document: default
+html_document: default
 ---
 
 # **Cyclistic Bike Share - Maximizing Annual Membership**
