@@ -254,7 +254,7 @@ data_12_months_2 %>%
   labs(title ="Number of Rides by Day of Week", x = "Day of Week", y = "Number of Rides")
 ```
 
-I also plotted the number of rides per-month, by member type. The summer months, particularly July and August, were the most popular for casual users. Members used bicycles at a higher rate that casual users September through May. Member use was more consistent than casual use May through October.
+I also plotted the number of rides per month, by member type. The summer months, particularly July and August, were the most popular for casual users. Members used bicycles at a higher rate than casual users from September through May. Member use was more consistent than casual use from May through October.
 
 ```{r}
 #arranges months in order
@@ -270,7 +270,7 @@ data_12_months_2 %>%
   labs(title ="Number of Rides per Month", x = "Month", y = "Number of Trips")
 ```
 
-Filtering the data by season provides a higher level picture. Summer is the most popular season for all users (2,353,948 rides), followed by fall (1,745,818 rides), spring (1,288,747 rides), and winter (466,581 rides).
+Filtering the data by season provides a higher-level picture. Summer is the most popular season for all users (2,353,948 rides), followed by fall (1,745,818 rides), spring (1,288,747 rides), and winter (466,581 rides).
 
 Filtering by season and user type provides even greater resolution.
 
@@ -288,10 +288,10 @@ data_12_months_2 %>%
   count(season)
 ```
 
-I attempted plotting use by hour, and by day of week, but my machine was unable to process the code.
+I attempted plotting use by the hour, and by day of the week, but my machine was unable to process the code.
 
 ```{r}
-#Bike use by hour, by day of week
+#Bike use by the hour, by day of the week
 ggplot(data = data_12_months_2) +
   aes(x = started_at, fill = member_type) +
   facet_wrap(~day_of_week) +
