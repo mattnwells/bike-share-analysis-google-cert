@@ -14,12 +14,12 @@ offered; (1) single-ride, (2) full-day, and (3) annual memberships.
 Company financial analysts have concluded annual members are the most
 profitable member segment. Cyclistic believes maximizing the number of
 annual memberships, by converting single-ride and full-day users to
-annual members, will drive revenue growth.
+annual members will drive revenue growth.
 
 *This study seeks to answer the question - how does Cyclistic bicycle
-use differs between annual members and casual riders?*
+use differ between annual members and casual riders?*
 
-## Data Preperation
+## Data Preparation
 
 Cyclistic ride data is available at the following link:
 <https://divvy-tripdata.s3.amazonaws.com/index.html>.
@@ -64,12 +64,12 @@ library(data.table) #exporting data
 
 ### Data Manipulation
 
-Monthly data files were combined into a single data frame consisting of 12 months data. Individual files were then dropped to clean up the
+Monthly data files were combined into a single data frame consisting of 12 months of data. Individual files were then dropped to clean up the
 environment. A copy of the data frame was created to preserve data
 integrity.
 
 ```{r}
-#merge files into single df 
+#merge files into a single df 
 data_12_months <- rbind(data_2021_06, data_2021_07, data_2021_08, data_2021_09, data_2021_10, data_2021_11, data_2021_12, data_2022_01, data_2022_02, data_2022_03, data_2022_04, data_2022_05) 
 
 #drop monthly files from environment
