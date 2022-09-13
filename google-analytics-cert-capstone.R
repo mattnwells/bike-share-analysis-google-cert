@@ -128,7 +128,7 @@ options(scipen = 999)
 data_12_months_2 %>%
   group_by(rideable_type, member_type) %>%
   dplyr::summarize(count_trips = n()) %>%  
-  ggplot(aes(x=rideable_type, y=count_trips, fill=member_casual, color=member_type)) +
+  ggplot(aes(x=rideable_type, y=count_trips, fill=member_type, color=member_type)) +
   geom_bar(stat='identity', position='dodge') +
   theme_bw()+
   labs(title="Number of Trips by Bicycle Type", x="Bicycle Type", y="Number of Rides")
@@ -140,7 +140,7 @@ data_12_months_2$day_of_week <- ordered(data_12_months_2$day_of_week, levels=c("
 data_12_months_2 %>%
   group_by(member_type,day_of_week) %>%
   dplyr::summarize(count_trips = n()) %>%  
-  ggplot(aes(x= day_of_week, y=count_trips, fill=member_casual, color=member_casual)) +
+  ggplot(aes(x= day_of_week, y=count_trips, fill=member_type, color=member_type)) +
   geom_bar(stat='identity', position = 'dodge') +
   theme_bw()+
   labs(title ="Number of Rides by Day of Week", x = "Day of Week", y = "Number of Rides")
