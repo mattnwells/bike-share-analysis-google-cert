@@ -157,7 +157,7 @@ data_12_months_2 %>%
   theme_bw() +
   labs(title ="Number of Rides per Month", x = "Month", y = "Number of Trips")
 
-#Bike use by hour, by day of week
+#Bike use by the hour, by day of the week
 ggplot(data = data_12_months_2) +
   aes(x = started_at, fill = member_type) +
   facet_wrap(~day_of_week) +
