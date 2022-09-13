@@ -122,7 +122,7 @@ data_12_months_2 <- data_12_months_2 %>% mutate(season =
 The raw data contained duplicates, null values, and
 invalid values that were cleaned. The raw data also contains
 unneeded data such as ride IDs, station IDs, and latitude and
-longitude coordinates (latitude and longitude patters would be
+longitude coordinates (latitude and longitude patterns would be
 interesting to explore in a future project).
 
 These issues are addressed by the code below.
@@ -150,7 +150,7 @@ data_12_months_2 <- data_12_months_2 %>%
   rename(member_type = member_casual)
 ```
 
-Finally, I converted ride_length from a character to numeric value and
+Finally, I converted ride_length from a character to a numeric value and
 viewed the final data frame.
 
 ```{r}
@@ -164,7 +164,7 @@ View(data_12_months_2)
 
 ## Data Analysis & Visualization
 
-Visualizations were made in R-studio using the ggplot2 library. Due to the large number of rows in the data set (n = 5,855,094) ggplot2 defaulted to labeling axes in scientific notation. The code below overrides this default.
+Visualizations were made in R-studio using the ggplot2 library. Due to a large number of rows in the data set (n = 5,855,094), ggplot2 defaulted to labeling axes in scientific notation. The code below overrides this default.
 
 ```{r}
 #converts values from scientific notation 
@@ -191,8 +191,7 @@ data_12_months_2 %>% count(member_type)
 ```
 
 3,213,333 rides were taken on classic style bicycles, 273,550 riders
-utilized docked bicycles, and 2,368,211 riders utilized electric
-assisted bicycles.
+utilized docked bicycles, and 2,368,211 riders utilized electric-assisted bicycles.
 
 ```{r}
 #total rides by bike type
@@ -216,10 +215,9 @@ data_12_months_2 %>%
 
 Casual riders used all three bike styles - 1,233,228 casual
 rides were taken on classic bicycles, 273,550 on docked bicycles, and
-1,048,653 on electric assisted bicycles.
+1,048,653 on electric-assisted bicycles.
 
-Members used classic bicycles in 1,980,105 cases and electric
-assisted bicycles in 1,319,558 cases. There is no data indicating docked
+Members used classic bicycles in 1,980,105 cases and electric-assisted bicycles in 1,319,558 cases. No data indicates docked
 bicycle use by a member.
 
 ```{r}
@@ -230,21 +228,20 @@ data_12_months_2 %>%
 ```
 
 The average ride was 19.37 mins. and the median ride was 11.33 mins. The
-shortest ride taken was 0.02 mins or 1.2 seconds - an obviously
-erroneous data point. The longest ride taken was 55,944.15 mins. or
-approximately 39 days. It is unclear if this is also an erroneous data point or if a customer was using a bicycle as a temporary replacement for another mode of transportation (for example, a broken down vehicle).
+shortest ride taken was 0.02 mins or 1.2 seconds - an obviously data point. The longest ride taken was 55,944.15 mins. or
+approximately 39 days. It is unclear if this is also an erroneous data point or if a customer was using a bicycle as a temporary replacement for another mode of transportation (for example, a broken-down vehicle).
 
 ```{r}
 #min, max, median, mean length of ride
 summary(data_12_months_2$ride_length)
 ```
 
-For this report, I defined a week as Monday through Sunday. The number of rides per-day, by member type, is plotted below. Members were more active than casual riders Monday through Friday but casual users were more active on weekends.
+For this report, I defined a week as Monday through Sunday. The number of rides per day, by member type, is plotted below. Members were more active than casual riders Monday through Friday but casual users were more active on weekends.
 
 The most popular day for casual users is Saturday, for members the most popular day is Tuesday.
 
 ```{r}
-#arrange days of week in order
+#arrange days of the week in order
 data_12_months_2$day_of_week <- ordered(data_12_months_2$day_of_week, levels=c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
 
 #plot number of rides by day of week
