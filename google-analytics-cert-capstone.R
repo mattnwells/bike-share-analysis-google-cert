@@ -133,7 +133,7 @@ data_12_months_2 %>%
   theme_bw()+
   labs(title="Number of Trips by Bicycle Type", x="Bicycle Type", y="Number of Rides")
 
-#arrange days of week in order
+#arrange days of the week in order
 data_12_months_2$day_of_week <- ordered(data_12_months_2$day_of_week, levels=c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
 
 #plot number of rides by day of week
