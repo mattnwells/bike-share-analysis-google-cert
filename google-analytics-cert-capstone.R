@@ -54,7 +54,7 @@ data_12_months_2$month <- format(as.Date(data_12_months_2$date), "%m")
 data_12_months_2$day <- format(as.Date(data_12_months_2$date), "%d")
 data_12_months_2$year <- format(as.Date(data_12_months_2$date), "%Y")
 
-#create column for ride season classification
+#create a column for ride season classification
 data_12_months_2 <- data_12_months_2 %>% mutate(season = 
   case_when(month == "03" ~ "Spring",
             month == "04" ~ "Spring",
