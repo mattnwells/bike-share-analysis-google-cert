@@ -326,13 +326,13 @@ data_12_months_2 %>%
   select(-member_type)
 ```
 
-## Recomendations
+## Recommendations
 
-The business question this study seeks to answers is, how does bicycle use differs between annual members and casual riders?
+The business question this study seeks to answer is, how does bicycle use differ between annual members and casual riders?
 
 I would recommend the following to increase member use.
 
-* Phase out docked bicycles - build a fleet of classic and electric assist bicycles only.
+* Phase out docked bicycles - build a fleet of classic and electric-assist bicycles only.
 * Invest in start and end stations outside of tourist districts. Particularly the top 5 listed above.
 * Conduct marking outreach to local employers to encourage their employees to commute by bicycle.
 * Increase marketing during late Spring and early Summer to maximize summer use.
@@ -343,7 +343,7 @@ I would recommend the following to increase member use.
 Special thanks to Itamar on
 [Kaggle.com](https://www.kaggle.com/code/itamargn/cyclistic-case-study/report),
 Joe Yong on
-[Medium](https://medium.com/@joeanselmyz/google-data-analytics-case-study-1-using-rstudio-7c552ab63aa3)
+[Medium](https://medium.com/@joeanselmyz/google-data-analytics-case-study-1-using-rstudio-7c552ab63aa3),
 and Kelly Adams at
 [kellyjadams.com](https://www.kellyjadams.com/post/google-capstone-project#viewer-uqmh)
 for publishing excellent case studies I was able to use for
