@@ -30,10 +30,10 @@ data_2022_03 <- read.csv("202203-divvy-tripdata.csv")
 data_2022_04 <- read.csv("202204-divvy-tripdata.csv")
 data_2022_05 <- read.csv("202205-divvy-tripdata.csv")
 
-#merge files into single df 
+#merge files into a single df 
 data_12_months <- rbind(data_2021_06, data_2021_07, data_2021_08, data_2021_09, data_2021_10, data_2021_11, data_2021_12, data_2022_01, data_2022_02, data_2022_03, data_2022_04, data_2022_05) 
 
-#drop monthly files from environment
+#drop monthly files from the environment
 remove(data_2021_06, data_2021_07, data_2021_08, data_2021_09, data_2021_10, data_2021_11, data_2021_12, data_2022_01, data_2022_02, data_2022_03, data_2022_04, data_2022_05)
 
 #copy df
@@ -47,7 +47,7 @@ data_12_months_2$ride_length <- difftime(data_12_months_2$ended_at, data_12_mont
 #create column day_of_week in text
 data_12_months_2$day_of_week <- wday(data_12_months_2$started_at)
 
-#create numeric columns for day of week, date, month, day, year
+#create numeric columns for the day of week, date, month, day, year
 data_12_months_2$date <- as.Date(data_12_months_2$started_at)
 data_12_months_2$day_of_week <- format(as.Date(data_12_months_2$date), "%A")
 data_12_months_2$month <- format(as.Date(data_12_months_2$date), "%m") 
