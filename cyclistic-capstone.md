@@ -11,7 +11,7 @@ public awareness and appealing to a broad market. Flexible pricing plans
 are core to this strategy and three purchasing tiers are currently
 offered; (1) single-ride, (2) full-day, and (3) annual memberships.
 
-Company financial analysts have concluded annual members are the most
+Cyclistic financial analysts have concluded annual members are the most
 profitable member segment. Cyclistic believes maximizing the number of
 annual memberships, by converting single-ride and full-day users to
 annual members will drive revenue growth.
@@ -72,7 +72,7 @@ integrity.
 #merge files into a single df 
 data_12_months <- rbind(data_2021_06, data_2021_07, data_2021_08, data_2021_09, data_2021_10, data_2021_11, data_2021_12, data_2022_01, data_2022_02, data_2022_03, data_2022_04, data_2022_05) 
 
-#drop monthly files from environment
+#drop monthly files from the environment
 remove(data_2021_06, data_2021_07, data_2021_08, data_2021_09, data_2021_10, data_2021_11, data_2021_12, data_2022_01, data_2022_02, data_2022_03, data_2022_04, data_2022_05)
 
 #copy df
@@ -93,7 +93,7 @@ data_12_months_2$day_of_week <- wday(data_12_months_2$started_at)
 I also added numeric columns for date, month, day, year, and season.
 
 ```{r}
-#create numeric columns for day of week, date, month, day, year
+#create numeric columns for the day of week, date, month, day, year
 data_12_months_2$date <- as.Date(data_12_months_2$started_at)
 data_12_months_2$day_of_week <- format(as.Date(data_12_months_2$date), "%A")
 data_12_months_2$month <- format(as.Date(data_12_months_2$date), "%m") 
@@ -230,7 +230,7 @@ data_12_months_2 %>%
 ```
 
 The average ride was 19.37 mins. and the median ride was 11.33 mins. The
-shortest ride taken was 0.02 mins or 1.2 seconds - an obviously data point. The longest ride taken was 55,944.15 mins. or
+shortest ride taken was 0.02 mins or 1.2 seconds - an erroneous data point. The longest ride taken was 55,944.15 mins. or
 approximately 39 days. It is unclear if this is also an erroneous data point or if a customer was using a bicycle as a temporary replacement for another mode of transportation (for example, a broken-down vehicle).
 
 ```{r}
